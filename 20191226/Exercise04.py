@@ -1,3 +1,5 @@
+# https://github.com/BoxBy/Cpp/tree/master/20190919 : Cpp to Python
+
 fOut = open("Info.txt", 'w')
 
 print("The number of team members : ")

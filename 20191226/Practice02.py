@@ -1,3 +1,5 @@
+# https://github.com/BoxBy/Cpp/tree/master/20190919 : Cpp to Python
+
 fIn = open("calculation.txt", 'r')
 
 strings = fIn.readlines()

@@ -1,6 +1,5 @@
 # https://github.com/BoxBy/Cpp/tree/master/20190926 : Cpp to Python
 
-#not complete
 from operator import itemgetter
 
 
@@ -11,7 +10,8 @@ class proverb:
         self.__pointer = 0
         self.__compare_count = 0
         self.__lines = [[' ', ], ]
-        self.__counts = [[0, 0], ]
+        self.__compare = [0]
+        self.__counts = [0]
         for i in range(self.__line_count): # using like static list
             self.__lines.append(' ')
 
@@ -20,34 +20,30 @@ class proverb:
     
     def stringIn(self, string):
         string.strip(';')
-        self.__lines[self.__pointer] = string.split(' ')
+        self.__lines[self.__pointer] = string.split()
         for i in range(len(self.__lines[self.__pointer])):
             self.compareCount(self.__pointer, i)
         self.__pointer += 1
 
-
     def compareCount(self, line, word): # count
-        if self.__counts[0][0] == 0:
-            self.__counts[0][0] = self.__lines[line][word]
-            self.__counts[0][1] = 1
+        compareWord = self.__lines[line][word].lower()
+        if compareWord in self.__compare :
+            self.__counts[self.__compare.index(compareWord)] += 1
             self.__compare_count += 1
-        else:
-            for i in range(self.__compare_count):
-                print("{}, {}".format(self.__counts[i][0], self.__lines[line][word]))
-                if self.__counts[i][0] == self.__lines[line][word]:
-                        self.__counts[i][1] += 1
-                        self.__compare_count += 1
-            
-            self.__counts.append([self.__lines[line][word], 1])
-        
-
+        else :
+            self.__counts.append(1)
+            self.__compare.append(compareWord)
         
     def bigFive(self):
-#        self.__counts.sort(key = itemgetter(1))
+        counts_compare = []
+        print("Top 5 Words")
+        for i in range(1, len(self.__compare)):
+            counts_compare.append([self.__compare[i], self.__counts[i]])
+            
+        counts_compare.sort(reverse = True, key = itemgetter(1))
 
-#        for i in range(5):
-        for temp in self.__counts:
-            print(temp)           
+        for i in range(5):
+            print("{} = {}".format(i + 1, counts_compare[i]))
 
 
 Proverbs = proverb(50, 100)

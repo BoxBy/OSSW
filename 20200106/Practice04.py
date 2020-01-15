@@ -1,5 +1,6 @@
 # https://github.com/BoxBy/Cpp/tree/master/20191010 : Cpp to Python
 
+# String implement
 class MyString:
     def __init__(self, string):
         self.__string_length = len(string)
@@ -52,7 +53,7 @@ str2 = MyString("<some string inserted between>")
 #str3 = MyString(str1)
 str3 = MyString("I love this long long string")
 
-#str1.reserve(30) python didn't need reserving
+#str1.reserve(30) # python didn't need reserving
 
 print("str1")
 #print("Capacity = {}".format(str1.capacity()))

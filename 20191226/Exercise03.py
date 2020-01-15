@@ -1,5 +1,7 @@
 # https://github.com/BoxBy/Cpp/tree/master/20190919 : Cpp to Python
 
+# File I/O
+
 inFile = open("input.txt", 'r')
 oFile = open("input.txt", 'w')
 

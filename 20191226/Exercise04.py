@@ -1,9 +1,11 @@
 # https://github.com/BoxBy/Cpp/tree/master/20190919 : Cpp to Python
 
+# File Out
+
 fOut = open("Info.txt", 'w')
 
 print("The number of team members : ")
-teamNum = int(input())
+teamNum = int(input()) #python input is string
 
 if fOut.writable():
     print("Name", "{: >10}".format("Age"), "{: >22}".format("Phone"))

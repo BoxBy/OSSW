@@ -1,5 +1,7 @@
 # https://github.com/BoxBy/Cpp/tree/master/20190919 : Cpp to Python
 
+# manip
+
 i = 91
 
 print("i = ", i, " (dec)")

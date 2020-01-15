@@ -1,5 +1,7 @@
 # https://github.com/BoxBy/Cpp/tree/master/20190926 : Cpp to Python
 
+# exception
+
 import random
 
 class underFlow(Exception):

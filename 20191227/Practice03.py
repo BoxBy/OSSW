@@ -1,11 +1,10 @@
 # https://github.com/BoxBy/Cpp/tree/master/20190926 : Cpp to Python
 
-from operator import itemgetter
-
+from operator import itemgetter # for sort
 
 class proverb:
     def __init__(self, word, line):
-        self.__word_count = word
+        self.__word_count = word # hiding
         self.__line_count = line
         self.__pointer = 0
         self.__compare_count = 0
@@ -15,11 +14,11 @@ class proverb:
         for i in range(self.__line_count): # using like static list
             self.__lines.append(' ')
 
-    def getProverb(self, line, word):
+    def getProverb(self, line, word): # getter
         return self.__lines[line][word]
     
     def stringIn(self, string):
-        string.strip(';')
+        string.strip(';') #erase semicolon
         self.__lines[self.__pointer] = string.split()
         for i in range(len(self.__lines[self.__pointer])):
             self.compareCount(self.__pointer, i)

@@ -66,24 +66,12 @@ class Kmeans :
 
     def setValue(self, Dict) :
         print("including wordDict-docTitle.txt")
-        temp = Dict.readline()
-        temp = Dict.readline()
-        temp = Dict.readline()
 
-        temp = Dict.readlines()
+        for line in Dict[1:4424] :
+            self.__word.append(self.clear(line))
 
-        for i in range(4423):
-            temp = Dict.readline()
-            self.__word.append(self.clear(temp))
-
-        temp = Dict.readline()
-        temp = Dict.readline()
-        temp = Dict.readline()
-        temp = Dict.readline()
-
-        for i in range(500):
-            temp = Dict.readline()
-            self.__dict.append(self.clear(temp))
+        for line in Dict[4428:4927] :
+            self.__dict.append(self.clear(line))
         
         print("Complete")
 

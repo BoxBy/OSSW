@@ -1,6 +1,6 @@
 # For Python
 
-.ink
+*.ink
 
 # Folders
 .vscode/

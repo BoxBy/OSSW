@@ -35,3 +35,4 @@ c1 = 200.87
 print("{0:*>10.2f}".format(a1))
 print("{0:*>10.2f}".format(b1))
 print("{0:*>10.2f}".format(c1))
+

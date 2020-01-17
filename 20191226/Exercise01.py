@@ -3,7 +3,7 @@
 i = 0
 
 def f1():
-#    i += 1 #ERROR
+#    i += 1
     i  = 0
     i += 1 # python doesn't using ++/--
 
